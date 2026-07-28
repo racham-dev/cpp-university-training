@@ -1,11 +1,10 @@
 
 ---
 
-# Week 1: C++ Foundations – Syntax, Variables, I/O & Operators
+Week 1: C++ Foundations – Syntax, Variables, I/O & Operators
 
-Duration: 2.5 hours (10‑min break halfway)
-Target: Absolute beginner – no prior coding experience required.
-Goal: Write your first C++ program, understand data types, take user input, and build a simple calculator.
+Duration Audience Goal
+2.5 hours (with 10-min break) 17-year-old university student (absolute beginner) Write first program, master data types, user input, and build a simple calculator.
 
 ---
 
@@ -13,70 +12,84 @@ Goal: Write your first C++ program, understand data types, take user input, and 
 
 By the end of this session, the student will be able to:
 
-1. Set up a C++ development environment (IDE or compiler).
-2. Write, compile, and run a “Hello World” program.
-3. Understand C++ syntax: #include, main(), return 0, semicolons.
-4. Declare and use variables of basic data types (int, double, char, bool, string).
-5. Read input from the keyboard using cin and output to the screen using cout.
-6. Perform arithmetic (+, -, *, /, %) and logical (&&, ||, !) operations.
-7. Build a simple calculator that adds, subtracts, multiplies, or divides two numbers.
+· Set up a C++ compiler/IDE and run a "Hello World" program.
+· Understand core C++ syntax: #include, main(), return 0, and semicolons.
+· Declare and use variables of types: int, double, char, bool, and string.
+· Take user input with cin and display output with cout.
+· Use arithmetic (+, -, *, /, %) and logical (&&, ||, !) operators.
+· Build a functional console calculator that handles basic math and division by zero.
 
 ---
 
-📚 Topic Breakdown & Instructor Script
+⏱️ Session Flow & Timetable
 
-0:00 – 0:15 | Introduction & Setup (15 mins)
-
-· What is C++? A powerful, general‑purpose language used in game engines, operating systems, and high‑performance applications.
-· Your tools: We’ll use VS Code + MinGW (Windows) or built‑in g++ (macOS/Linux). Alternatively, use Code::Blocks or an online compiler like OnlineGDB to start immediately.
-· Compilation: Write code → compile (g++ myprogram.cpp -o myprogram) → run (./myprogram or myprogram.exe).
+Time Activity Key Focus
+0:00 – 0:15 Introduction & Environment Setup Installing VS Code / g++, online compilers
+0:15 – 0:40 First Program & Basic Syntax iostream, main(), cout, comments
+0:40 – 1:10 Variables & Data Types int, double, char, bool, string
+1:10 – 1:35 Input (cin) & Output (cout) Reading keyboard input, formatting output
+1:35 – 1:45 ☕ Break (10 minutes)
+1:45 – 2:10 Arithmetic & Logical Operators Integer division vs floating-point, operator precedence
+2:10 – 2:30 Capstone Activity: Simple Calculator Combine everything into a working program
+2:30 – 2:45 Q&A + Homework Assignment Review, discuss homework, share references
 
 ---
 
-0:15 – 0:40 | First Program & Basic Syntax (25 mins)
+📚 Detailed Instructor Script & Live Code Demos
 
-Code:
+0:00 – 0:15 | Introduction & Setup
+
+· What is C++? A fast, powerful language used for games, operating systems, and finance. It's an extension of C with object-oriented features.
+· Your tools for today: We will use OnlineGDB (no install required) so we can start coding immediately. Later we will install VS Code + MinGW or Code::Blocks.
+· How it works: Write code → Compiler translates to machine code → Run the executable.
+· Command line basics (optional): g++ myprogram.cpp -o myprogram then ./myprogram.
+
+---
+
+0:15 – 0:40 | First Program & Basic Syntax
+
+Code Example 1 – Hello World:
 
 ```cpp
-// This is a comment – ignored by the compiler
-#include <iostream>   // Input/output library
-using namespace std;   // So we can write cout instead of std::cout
+// This is a single-line comment – compiler ignores it
+#include <iostream>   // Include the standard input/output library
+using namespace std;   // So we can type 'cout' instead of 'std::cout'
 
-int main() {           // Program starts here
-    cout << "Hello, World!" << endl;  // Print to screen
-    return 0;          // Tell OS the program ended successfully
+int main() {           // Every C++ program starts here
+    cout << "Hello, World!" << endl;  // Print text to the console
+    return 0;          // Return 0 to indicate successful execution
 }
 ```
 
-Key concepts:
+Key Syntax Rules:
 
-· #include <iostream> – includes the standard I/O library.
-· using namespace std; – avoids typing std:: every time (explain later that it's okay for small programs).
-· int main() – every C++ program needs a main function. The int means it returns an integer to the OS.
-· cout (character output) prints text. endl adds a new line.
-· Statements end with a semicolon ;.
-· Comments: // for single‑line, /* ... */ for multi‑line.
+· #include <iostream> – tells the compiler to add the I/O library.
+· using namespace std; – saves typing std:: before cout and cin (good for small programs).
+· int main() – the entry point. Every program must have exactly one main.
+· cout << "text" – the << operator pushes text to the output stream.
+· endl – moves to a new line (like pressing Enter).
+· Every statement must end with a semicolon ;. Forgetting it is the #1 beginner mistake.
 
-Exercise: Change the message and run again.
+Exercise: Change the message to your name and run it again.
 
 ---
 
-0:40 – 1:10 | Variables & Data Types (30 mins)
+0:40 – 1:10 | Variables & Data Types
 
-Data types:
+Data Type Cheat Sheet:
 
-Type Description Example
-int Whole numbers (no decimals) int age = 17;
-double Decimal numbers double price = 19.99;
-char Single character (in single quotes) char grade = 'A';
-bool True/false (1 or 0) bool isStudent = true;
-string Text (must include <string>) string name = "Alice";
+Type Description Example Size (approx)
+int Whole numbers (no decimals) int age = 17; 4 bytes
+double Decimal numbers double price = 19.99; 8 bytes
+char Single character (single quotes) char grade = 'A'; 1 byte
+bool True or false (1 or 0) bool isStudent = true; 1 byte
+string Text (must include <string>) string name = "Alice"; Variable
 
-Code:
+Code Example 2 – Declaring and Printing Variables:
 
 ```cpp
 #include <iostream>
-#include <string>
+#include <string>   // Required for the 'string' type
 using namespace std;
 
 int main() {
@@ -90,26 +103,27 @@ int main() {
     cout << "Age: " << age << endl;
     cout << "Price: $" << price << endl;
     cout << "Initial: " << initial << endl;
-    cout << "Passed? " << passed << endl;  // prints 1 for true
+    cout << "Passed? " << passed << endl;  // prints 1 for true, 0 for false
     return 0;
 }
 ```
 
-Important:
+Important Notes:
 
-· Variables must be declared before use.
-· string requires #include <string>.
-· bool outputs 1 (true) or 0 (false). To print “true”/“false”, use boolalpha – we’ll cover later.
+· string requires #include <string> (even though some compilers auto-include it, always add it).
+· bool prints 1 for true and 0 for false. To print "true" or "false", add cout << boolalpha; later.
+· Variable names must start with a letter or underscore, cannot contain spaces, and are case-sensitive (age ≠ Age).
 
-Exercise: Declare your own variables for your age, favourite number, and a character, then print them.
+Exercise: Create your own variables for your age, favorite number, and first initial. Print them in a sentence.
 
 ---
 
-1:10 – 1:35 | Input & Output – cin & cout (25 mins)
+1:10 – 1:35 | Input (cin) & Output (cout)
 
-· cout (character output) uses << (insertion operator).
-· cin (character input) uses >> (extraction operator).
-· Example:
+· cout uses << (insertion operator) to send data to the screen.
+· cin uses >> (extraction operator) to read data from the keyboard.
+
+Code Example 3 – Taking User Input:
 
 ```cpp
 #include <iostream>
@@ -117,35 +131,41 @@ using namespace std;
 
 int main() {
     int number;
-    cout << "Enter a number: ";
-    cin >> number;
+    cout << "Enter a whole number: ";
+    cin >> number;                      // Wait for user to type a number and press Enter
     cout << "You entered: " << number << endl;
     return 0;
 }
 ```
 
-Note: cin automatically handles whitespace for numbers and strings (but for strings with spaces, you need getline – we’ll cover later).
+Pro Tip: cin stops reading at whitespace (space, tab, newline). For full names with spaces, we will use getline(cin, fullName) in Week 2.
 
-Exercise: Ask the user for their name and age, then print a greeting.
-
----
-
-1:35 – 1:45 | ☕ Break (10 mins)
+Exercise: Write a program that asks for the user's name and age, then prints a greeting like:
+"Hello John! You are 17 years old."
 
 ---
 
-1:45 – 2:10 | Arithmetic & Logical Operators (25 mins)
+1:35 – 1:45 | ☕ Break
 
-Arithmetic operators:
+(10 minutes – stretch, grab water)
 
-Operator Meaning Example
-+ Addition a + b
-- Subtraction a - b
-* Multiplication a * b
-/ Division a / b (integer division for ints!)
-% Modulus (remainder) a % b
+---
 
-Code:
+1:45 – 2:10 | Arithmetic & Logical Operators
+
+Arithmetic Operators:
+
+Operator Operation Example Result
++ Addition 10 + 3 13
+- Subtraction 10 - 3 7
+* Multiplication 10 * 3 30
+/ Division 10 / 3 3 (integer division!)
+% Modulus (remainder) 10 % 3 1
+
+Critical Warning about Division:
+In C++, 10 / 3 gives 3 because both are integers (truncates the decimal). To get 3.333, use 10.0 / 3 or 10 / 3.0.
+
+Code Example 4 – Math Operators:
 
 ```cpp
 int a = 10, b = 3;
@@ -154,36 +174,36 @@ cout << "a - b = " << a - b << endl;   // 7
 cout << "a * b = " << a * b << endl;   // 30
 cout << "a / b = " << a / b << endl;   // 3 (integer division)
 cout << "a % b = " << a % b << endl;   // 1 (remainder)
+
+double c = 10.0, d = 3.0;
+cout << "c / d = " << c / d << endl;   // 3.33333 (floating division)
 ```
 
-Important:
+Logical Operators:
 
-· Integer division truncates decimals. To get a decimal result, use double for at least one operand.
-· Example: 10 / 3 = 3, but 10.0 / 3 = 3.333...
+Operator Name Example Result
+&& AND (age > 13 && age < 20) true if both are true
+`  ` OR
+! NOT !(passed) true if passed is false
 
-Logical operators:
-
-Operator Meaning Example
-&& AND (both true) (age > 18 && age < 30)
-`  `
-! NOT (inverts) !(passed)
-
-Code:
+Code Example 5 – Logical Checks:
 
 ```cpp
 bool isTeen = (age >= 13 && age <= 19);
-bool isAdult = (age >= 18);
+bool canVote = (age >= 18);
 cout << "Is teen? " << isTeen << endl;
-cout << "Is adult? " << isAdult << endl;
+cout << "Can vote? " << canVote << endl;
 ```
+
+Exercise: Write a small program that declares two numbers and prints the result of +, -, *, /, and %.
 
 ---
 
-2:10 – 2:30 | Capstone Activity: Simple Calculator (20 mins)
+2:10 – 2:30 | Capstone Activity: Simple Calculator
 
-Now we combine everything into a calculator that asks the user for two numbers and an operator, then outputs the result.
+Combine everything to build a menu-driven calculator that takes two numbers and an operator.
 
-Code:
+Code Example 6 – Full Calculator (Live Demo):
 
 ```cpp
 #include <iostream>
@@ -209,12 +229,12 @@ int main() {
         result = num1 * num2;
     } else if (op == '/') {
         if (num2 == 0) {
-            cout << "Error: Division by zero!" << endl;
-            return 1;
+            cout << "Error: Division by zero is not allowed!" << endl;
+            return 1;  // Exit with error code
         }
         result = num1 / num2;
     } else {
-        cout << "Invalid operator!" << endl;
+        cout << "Invalid operator! Please use +, -, *, or /." << endl;
         return 1;
     }
     
@@ -225,41 +245,48 @@ int main() {
 
 Walkthrough:
 
-· We use double to handle decimals.
-· The if/else if chain checks the operator.
-· Division by zero is handled gracefully.
-· The result is printed.
-
-Try it: Run the calculator with different numbers and operators.
+· We use double so the calculator works with decimals.
+· The if / else if chain checks which operator was entered.
+· We handle division by zero gracefully with a specific error message.
+· Invalid operators are caught and reported.
 
 ---
 
-2:30 – 2:45 | Q&A & Homework (15 mins)
+2:30 – 2:45 | Q&A & Homework
 
-Homework:
+Review Questions:
 
-1. Modify the calculator to support modulus (%) – remember that % works only with integers, so you’ll need to cast or use int.
-2. Write a program that asks the user for the radius of a circle and prints the area (area = 3.14159 * radius * radius). Use double.
-3. Extra challenge: Write a program that converts Celsius to Fahrenheit: F = (C * 9/5) + 32.
+· What does #include <iostream> do?
+· Why does 10 / 3 give 3 and not 3.333?
+· How do you read a number from the user?
 
-Submission: Share your .cpp files via email or push to your own GitHub repo.
+Homework (submit .cpp files next session):
+
+1. Modify the calculator to also support modulus (%). Hint: % only works on integers, so cast your inputs to int or use int variables.
+2. Area of a circle: Write a program that asks the user for the radius (as a double) and prints the area using area = 3.14159 * radius * radius.
+3. Bonus challenge: Write a program that converts Celsius to Fahrenheit: F = (C * 9/5) + 32. Test with 0°C → 32°F.
 
 ---
 
 📖 References & Further Learning
 
-· W3Schools C++ Tutorial – https://www.w3schools.com/cpp/ (excellent for quick reference)
-· YouTube – Programming with Mosh – “C++ Tutorial for Beginners” (very clear) – https://youtu.be/vLnPwxZdW4Y
-· YouTube – freeCodeCamp – “C++ Full Course for Beginners” – https://youtu.be/vLnPwxZdW4Y (or search for updated ones)
-· cppreference.com – official C++ documentation – https://en.cppreference.com/
-· Online Compiler – https://www.onlinegdb.com/online_c++_compiler – to test code without local setup.
+Resource Type Link
+W3Schools C++ Tutorial Best for quick syntax reference https://www.w3schools.com/cpp/
+Programming with Mosh (YouTube) Excellent beginner walkthrough https://youtu.be/vLnPwxZdW4Y
+freeCodeCamp C++ Course (YouTube) Full 4-hour free course https://youtu.be/vLnPwxZdW4Y (search for updated)
+cppreference.com Official C++ documentation https://en.cppreference.com/
+OnlineGDB Compiler Write & run C++ in your browser https://www.onlinegdb.com/online_c++_compiler
 
 ---
 
 🧠 Instructor Notes
 
-· Keep it interactive: Ask the student to predict what each line does before you run it.
-· Common pitfalls: Forgetting semicolons, missing #include <string> for strings, mixing integer division.
-· Grading: The calculator homework is the main deliverable – check for correct logic and error handling.
+· Teaching style: W3Schools-inspired – show code first, explain line-by-line, then let the student modify it.
+· Common pitfalls to watch for: Missing semicolons, forgetting #include <string>, and integer division surprises.
+· Engagement: Ask the student to predict the output before running every code block.
+
+---
+
+Next week: We will dive into Control Flow – if/else statements, switch, and loops (for, while) to make our programs think and repeat.
 
 ---
