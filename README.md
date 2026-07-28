@@ -2,7 +2,6 @@
 6-week professional C++ curriculum with weekly lesson notes, code examples, and a final capstone project.
 
 
-`markdown
 # 🎓 6-Week Professional C++ Training Curriculum
 
 **Target Student:** University student (17 years old)  
