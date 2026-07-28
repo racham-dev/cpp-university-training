@@ -1,7 +1,7 @@
 
 ---
 
-#Week 1: C++ Foundations – Syntax, Variables, I/O & Operators
+# Week 1: C++ Foundations – Syntax, Variables, I/O & Operators
 
 Duration: 2.5 hours (10‑min break halfway)
 Target: Absolute beginner – no prior coding experience required.
