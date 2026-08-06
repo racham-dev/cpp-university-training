@@ -1,11 +1,4 @@
-Here’s a real‑life assignment on variables, cin, cout, and arithmetic – designed as a shopping cart calculator.
-It includes both whole numbers (quantity) and decimal numbers (price), and guides the student through collecting input, storing it, calculating a total, and displaying the result.
 
-Copy this entire Markdown into a file (e.g., assignment_shopping_cart.md) and push it to your GitHub repo.
-
----
-
-```markdown
 # 🛒 Assignment: Shopping Cart Total Calculator
 
 **Goal:** Write a C++ program that asks the user for the **price** of an item (decimal) and the **quantity** (whole number), then calculates and displays the **total cost**.
