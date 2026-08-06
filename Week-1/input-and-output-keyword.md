@@ -8,7 +8,7 @@
 
 ---
 
-## 🖥️ What is `cout`?
+## 🖥️ #What is `cout`?
 
 `cout` stands for **Character Output**. It is the standard output stream in C++ that sends data to the display (usually the terminal or console).
 
