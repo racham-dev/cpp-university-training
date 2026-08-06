@@ -64,7 +64,7 @@ int main() {
     return 0;
 }```
 
----
+___
 
 
 #🧠 Step‑by‑Step Explanation (What happens at each line)
