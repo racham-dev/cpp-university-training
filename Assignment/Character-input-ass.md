@@ -62,11 +62,12 @@ int main() {
     cout << "==========================================\n";
 
     return 0;
-}
+}```
 
 ---
 
-🧠 Step‑by‑Step Explanation (What happens at each line)
+
+#🧠 Step‑by‑Step Explanation (What happens at each line)
 
 Line What it does
 #include <string> Allows us to use the string data type for text.
