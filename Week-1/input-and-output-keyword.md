@@ -60,7 +60,7 @@ Formatting Tips
 
 ---
 
-⌨️ What is cin?
+⌨️ #What is cin?
 
 cin stands for Character Input. It is the standard input stream that reads data from the keyboard.
 
@@ -95,7 +95,7 @@ cout << "Sum = " << a + b << endl;
 
 ---
 
-⚠️ The Whitespace Trap (Why cin >> Fails for Full Names)
+⚠️ #The Whitespace Trap (Why cin >> Fails for Full Names)
 
 cin >> stops reading when it encounters a space, tab, or newline. So if you try:
 
@@ -133,7 +133,7 @@ getline(cin, name);
 
 ---
 
-📥 Input Type Mismatch
+📥 #Input Type Mismatch
 
 If the user enters a value that doesn't match the variable type (e.g., type "abc" when expecting an int), the input fails. The variable remains unchanged and cin goes into an error state. We'll learn to handle this later.
 
@@ -141,7 +141,7 @@ For now: Always assume the user provides correct input.
 
 ---
 
-💡 Summary Table
+💡 #Summary Table
 
 Operator Purpose Example
 cout << Output to screen cout << "Hello";
@@ -152,7 +152,7 @@ getline(cin, string) Read full line with spaces getline(cin, fullName);
 
 ---
 
-🧪 In‑Class Exercises
+🧪 #In‑Class Exercises
 
 1. Greeting program: Ask the user for their first name (without spaces) and age, then print:
       "Hello [name], you are [age] years old."
@@ -162,7 +162,7 @@ getline(cin, string) Read full line with spaces getline(cin, fullName);
 
 ---
 
-🎯 Assignment (Push to your repo)
+🎯 #Assignment (Push to your repo)
 
 1. Simple calculator: Ask the user for two numbers and an operator (+, -, *, /). Perform the operation and print the result. (Use double for numbers.)
 2. Rectangle area with getline: Ask the user for their full name, then ask for length and width (double). Calculate the area and print a message like:
@@ -171,7 +171,7 @@ getline(cin, string) Read full line with spaces getline(cin, fullName);
 
 ---
 
-📖 References
+📖 #References
 
 · W3Schools – C++ Output
 · W3Schools – C++ Input
@@ -179,7 +179,7 @@ getline(cin, string) Read full line with spaces getline(cin, fullName);
 
 ---
 
-🧠 Instructor Notes
+🧠 #Instructor Notes
 
 · Emphasise that cout uses << and cin uses >> – the arrows point in the direction of data flow.
 · Show how endl and \n differ; \n is more efficient but endl is useful for debugging.
