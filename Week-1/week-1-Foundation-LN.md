@@ -35,7 +35,7 @@ int main() {
 }
 ```
 
-Explanation:
+#Explanation:
 
 · #include <iostream> – adds the input/output library so you can use cout.
 · using namespace std; – allows you to write cout instead of std::cout.
@@ -48,11 +48,11 @@ Modify the program to print your name and age (e.g., “My name is Victor, I am 
 
 ---
 
-2. Variables – Storing Data
+#2. Variables – Storing Data
 
 Variables are named memory locations that hold values. Each variable has a data type that determines what kind of data it can store and how much memory it uses.
 
-Data Type Quick Reference
+#Data Type Quick Reference
 
 Type Keyword Example Size (approx)
 Whole number int int age = 17; 4 bytes
@@ -60,14 +60,14 @@ Decimal number double double price = 19.99; 8 bytes
 Single character char char grade = 'A'; 1 byte
 True/False bool bool isStudent = true; 1 byte
 
-Rules for naming variables:
+#Rules for naming variables:
 
 · Must start with a letter or underscore (_).
 · Can contain letters, digits, and underscores.
 · Case‑sensitive (age and Age are different).
 · Cannot be a C++ keyword (like int, return).
 
-Example:
+#Example:
 
 ```cpp
 int age = 17;
@@ -83,7 +83,7 @@ Declare variables for your age (int), your height in meters (double), your first
 
 ---
 
-3. Input and Output – cin and cout
+#3. Input and Output – cin and cout
 
 · cout << (output) – sends data to the screen.
 · cin >> (input) – reads data from the keyboard and stores it in a variable.
@@ -97,7 +97,7 @@ cin >> number;
 cout << "You entered: " << number << endl;
 ```
 
-Reading multiple values:
+#Reading multiple values:
 
 ```cpp
 int a, b;
@@ -114,7 +114,7 @@ Write a program that asks for your first name and age, then prints a greeting li
 
 ---
 
-4. Arithmetic Operators
+#4. Arithmetic Operators
 
 Operator Name Example Result (a=10, b=3)
 + Addition a + b 13
@@ -141,7 +141,7 @@ Write a program that asks for two integers, then prints their sum, difference, p
 
 ---
 
-5. Building the Simple Console Calculator
+#5. Building the Simple Console Calculator
 
 Combine everything you’ve learned to make a calculator that takes two numbers and an operator, then prints the result.
 
@@ -197,7 +197,7 @@ Extend the calculator to also support modulus (%). Remember that % works only wi
 
 ---
 
-🎯 Assignment: Submit to Your Repo
+#🎯 Assignment: Submit to Your Repo
 
 Now it’s time to practise. Complete the following tasks and push your code to the assignment repository (your instructor will share the link).
 
@@ -211,7 +211,7 @@ Submit your .cpp files – one per task – in your repo by the next session.
 
 ---
 
-📖 References & Further Learning
+#📖 References & Further Learning
 
 Resource Type Link
 W3Schools C++ Tutorial Quick reference https://www.w3schools.com/cpp/
@@ -220,7 +220,7 @@ OnlineGDB (run code in browser) Online compiler https://www.onlinegdb.com/online
 
 ---
 
-🧠 Instructor Notes
+#🧠 Instructor Notes
 
 · Teaching style: Show each code snippet, explain line‑by‑line, then let the student modify it.
 · Common pitfalls: Missing semicolons, forgetting #include <iostream>, integer division surprises.
