@@ -63,3 +63,65 @@ int main() {
 
     return 0;
 }
+
+
+🧠 Step‑by‑Step Explanation (What happens at each line)
+
+Line What it does
+#include <string> Allows us to use the string data type for text.
+string fullName, ... Creates boxes (variables) to hold the data.
+getline(cin, fullName); Reads the entire line of text (including spaces) and stores it in fullName.
+cin >> phoneNumber; Reads a single word (no spaces) into phoneNumber.
+cin >> salary; Reads a number (like 50000.75) into the salary variable.
+cout << ... Prints the stored values to the screen in a clean table format.
+
+---
+
+🎯 The "Twist" Victor Needs to Know
+
+Because we used getline() first, this program works perfectly. However, if you ever put getline() after a cin >>, you will run into a sneaky bug called the "leftover newline".
+
+For this assignment, the order above is correct and works flawlessly.
+
+---
+
+🧪 Sample Run (What Victor should see in his terminal)
+
+```
+Enter your Full Name: Victor James
+Enter your Phone Number: 08012345678
+Enter your BVN: 12345678901
+Enter your Salary payment: 75000.50
+Enter your Gender (Male/Female): Male
+
+==========================================
+        USER DATA CONFIRMATION            
+==========================================
+Full Name      : Victor James
+Phone Number   : 08012345678
+BVN            : 12345678901
+Salary Payment : $75000.5
+Gender         : Male
+==========================================
+```
+
+---
+
+✅ What Victor needs to do right now (Before 3pm)
+
+1. Open VS Code (or OnlineGDB) and create a new file called user_data.cpp.
+2. Copy and paste the code above into the file.
+3. Compile and run it (g++ user_data.cpp -o user_data then .\user_data.exe).
+4. Test it by typing different values (try a name with 3 words, like "John Paul Smith").
+5. Observe how getline() perfectly catches the full name, while cin >> correctly catches the other fields.
+
+---
+
+🧠 Bonus Challenge (If he finishes early)
+
+Modify the program so that:
+
+· It asks for Age as well (use int).
+· It calculates Yearly Salary (Salary * 12) and displays it under the salary line.
+
+---
