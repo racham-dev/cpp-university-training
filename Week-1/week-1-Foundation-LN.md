@@ -229,11 +229,3 @@ OnlineGDB (run code in browser) Online compiler https://www.onlinegdb.com/online
 
 ---
 
-Now you're ready to teach Week 1!
-Share this file with Victor and point him to the assignment repo. 🚀
-
-```
-
----
-
-This note is self‑contained, includes all topics, and has exercises for each part. You can easily add it to your repo and share it with Victor. Good luck with the class!
